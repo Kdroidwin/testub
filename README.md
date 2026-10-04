@@ -2,7 +2,7 @@
 
 The GitHub Actions workflow reads recent posts from `@masaomi346` through `twitter-api-safe-relay`, extracts URL hostnames, and writes one uBlock Origin rule per line to the repository root file `ublockoriginbadwarefromx.txt`, such as `||example.com^`. It normalizes common defanged forms (`hxxps://`, escaped slashes, and `\.`), deduplicates hostnames, and excludes `virustotal.com` and `urlscan.io` including their subdomains.
 
-It runs every six hours or manually from **Actions → Update X badware domains → Run workflow**. It reads up to 400 posts each run and commits the list only when it changes. The initial file was seeded from the example posts supplied for this setup; after relay secrets are configured, the workflow replaces it with the fetched list.
+It runs every hour or manually from **Actions → Update X badware domains → Run workflow**. It reads up to 400 posts each run and commits the list only when it changes. The initial file was seeded from the example posts supplied for this setup; after relay secrets are configured, the workflow replaces it with the fetched list.
 
 ## Required setup
 
